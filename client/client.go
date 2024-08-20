@@ -595,21 +595,21 @@ func (client *Client) Init(config *Config) (_err error) {
 //
 // # Encapsulate the request and invoke the network
 //
-// @param action - api name
+//  action - api name
 //
-// @param version - product version
+//  version - product version
 //
-// @param protocol - http or https
+//  protocol - http or https
 //
-// @param method - e.g. GET
+//  method - e.g. GET
 //
-// @param authType - authorization type e.g. AK
+//  authType - authorization type e.g. AK
 //
-// @param bodyType - response body type e.g. String
+//  bodyType - response body type e.g. String
 //
-// @param request - object of OpenApiRequest
+//  request - object of OpenApiRequest
 //
-// @param runtime - which controls some details of call api, such as retry times
+//  runtime - which controls some details of call api, such as retry times
 //
 // @return the response
 func (client *Client) DoRPCRequest(action *string, version *string, protocol *string, method *string, authType *string, bodyType *string, request *OpenApiRequest, runtime *util.RuntimeOptions) (_result map[string]interface{}, _err error) {
@@ -899,23 +899,23 @@ func (client *Client) DoRPCRequest(action *string, version *string, protocol *st
 //
 // # Encapsulate the request and invoke the network
 //
-// @param action - api name
+//  action - api name
 //
-// @param version - product version
+//  version - product version
 //
-// @param protocol - http or https
+//  protocol - http or https
 //
-// @param method - e.g. GET
+//  method - e.g. GET
 //
-// @param authType - authorization type e.g. AK
+//  authType - authorization type e.g. AK
 //
-// @param pathname - pathname of every api
+//  pathname - pathname of every api
 //
-// @param bodyType - response body type e.g. String
+//  bodyType - response body type e.g. String
 //
-// @param request - object of OpenApiRequest
+//  request - object of OpenApiRequest
 //
-// @param runtime - which controls some details of call api, such as retry times
+//  runtime - which controls some details of call api, such as retry times
 //
 // @return the response
 func (client *Client) DoROARequest(action *string, version *string, protocol *string, method *string, authType *string, pathname *string, bodyType *string, request *OpenApiRequest, runtime *util.RuntimeOptions) (_result map[string]interface{}, _err error) {
@@ -1182,23 +1182,23 @@ func (client *Client) DoROARequest(action *string, version *string, protocol *st
 //
 // # Encapsulate the request and invoke the network with form body
 //
-// @param action - api name
+//  action - api name
 //
-// @param version - product version
+//  version - product version
 //
-// @param protocol - http or https
+//  protocol - http or https
 //
-// @param method - e.g. GET
+//  method - e.g. GET
 //
-// @param authType - authorization type e.g. AK
+//  authType - authorization type e.g. AK
 //
-// @param pathname - pathname of every api
+//  pathname - pathname of every api
 //
-// @param bodyType - response body type e.g. String
+//  bodyType - response body type e.g. String
 //
-// @param request - object of OpenApiRequest
+//  request - object of OpenApiRequest
 //
-// @param runtime - which controls some details of call api, such as retry times
+//  runtime - which controls some details of call api, such as retry times
 //
 // @return the response
 func (client *Client) DoROARequestWithForm(action *string, version *string, protocol *string, method *string, authType *string, pathname *string, bodyType *string, request *OpenApiRequest, runtime *util.RuntimeOptions) (_result map[string]interface{}, _err error) {
@@ -1468,21 +1468,21 @@ func (client *Client) DoROARequestWithForm(action *string, version *string, prot
 //
 // # Encapsulate the request and invoke the network
 //
-// @param action - api name
+//  action - api name
 //
-// @param version - product version
+//  version - product version
 //
-// @param protocol - http or https
+//  protocol - http or https
 //
-// @param method - e.g. GET
+//  method - e.g. GET
 //
-// @param authType - authorization type e.g. AK
+//  authType - authorization type e.g. AK
 //
-// @param bodyType - response body type e.g. String
+//  bodyType - response body type e.g. String
 //
-// @param request - object of OpenApiRequest
+//  request - object of OpenApiRequest
 //
-// @param runtime - which controls some details of call api, such as retry times
+//  runtime - which controls some details of call api, such as retry times
 //
 // @return the response
 func (client *Client) DoRequest(params *Params, request *OpenApiRequest, runtime *util.RuntimeOptions) (_result map[string]interface{}, _err error) {
@@ -1800,21 +1800,21 @@ func (client *Client) DoRequest(params *Params, request *OpenApiRequest, runtime
 //
 // # Encapsulate the request and invoke the network
 //
-// @param action - api name
+//  action - api name
 //
-// @param version - product version
+//  version - product version
 //
-// @param protocol - http or https
+//  protocol - http or https
 //
-// @param method - e.g. GET
+//  method - e.g. GET
 //
-// @param authType - authorization type e.g. AK
+//  authType - authorization type e.g. AK
 //
-// @param bodyType - response body type e.g. String
+//  bodyType - response body type e.g. String
 //
-// @param request - object of OpenApiRequest
+//  request - object of OpenApiRequest
 //
-// @param runtime - which controls some details of call api, such as retry times
+//  runtime - which controls some details of call api, such as retry times
 //
 // @return the response
 func (client *Client) Execute(params *Params, request *OpenApiRequest, runtime *util.RuntimeOptions) (_result map[string]interface{}, _err error) {
@@ -2139,9 +2139,9 @@ func (client *Client) GetType() (_result *string, _err error) {
 //
 // # If inputValue is not null, return it or return defaultValue
 //
-// @param inputValue - users input value
+//  inputValue - users input value
 //
-// @param defaultValue - default value
+//  defaultValue - default value
 //
 // @return the final result
 func DefaultAny(inputValue interface{}, defaultValue interface{}) (_result interface{}) {
@@ -2158,7 +2158,7 @@ func DefaultAny(inputValue interface{}, defaultValue interface{}) (_result inter
 //
 // # If the endpointRule and config.endpoint are empty, throw error
 //
-// @param config - config contains the necessary information to create a client
+//  config - config contains the necessary information to create a client
 func (client *Client) CheckConfig(config *Config) (_err error) {
 	if tea.BoolValue(util.Empty(client.EndpointRule)) && tea.BoolValue(util.Empty(config.Endpoint)) {
 		_err = tea.NewSDKError(map[string]interface{}{
@@ -2175,7 +2175,7 @@ func (client *Client) CheckConfig(config *Config) (_err error) {
 //
 // set gateway client
 //
-// @param spi - .
+//  spi - .
 func (client *Client) SetGatewayClient(spi spi.ClientInterface) (_err error) {
 	client.Spi = spi
 	return _err
@@ -2185,7 +2185,7 @@ func (client *Client) SetGatewayClient(spi spi.ClientInterface) (_err error) {
 //
 // set RPC header for debug
 //
-// @param headers - headers for debug, this header can be used only once.
+//  headers - headers for debug, this header can be used only once.
 func (client *Client) SetRpcHeaders(headers map[string]*string) (_err error) {
 	client.Headers = headers
 	return _err
