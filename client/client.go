@@ -517,7 +517,7 @@ type Client struct {
 //
 // # Init client with Config
 //
-// @param config - config contains the necessary information to create a client
+//  - config contains the necessary information to create a client
 func NewClient(config *Config) (*Client, error) {
 	client := new(Client)
 	err := client.Init(config)
