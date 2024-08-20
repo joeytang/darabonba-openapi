@@ -1,4 +1,4 @@
-module github.com/alibabacloud-go/darabonba-openapi/v2
+module github.com/joeytang/darabonba-openapi
 
 go 1.14
 
